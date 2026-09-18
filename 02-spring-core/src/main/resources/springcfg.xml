@@ -3,20 +3,55 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- bean definitions here -->
-    <bean id="dev" class="com.spring.springFirstApp.Developer"> </bean>
-
-    <bean id="devobj" class="com.spring.objectCreation.Developer"> </bean>
+    <!--object creation-->
+<!--    <bean id="dev" class="com.spring.springFirstApp.Developer"> </bean>-->
+<!--    <bean id="devobj" class="com.spring.objectCreation.Developer"> </bean>-->
 
 
     <!-- for Scope-->
-    <bean id="studentOne" class="com.spring.objectCreation.Student" scope="prototype"> </bean>
-    <bean id="studentTwo" class="com.spring.objectCreation.Student" scope="prototype"> </bean>
+<!--    <bean id="studentOne" class="com.spring.objectCreation.Student" scope="prototype"> </bean>-->
+<!--    <bean id="studentTwo" class="com.spring.objectCreation.Student" scope="prototype"> </bean>-->
 
-    <bean id="student" class="com.spring.setterInjection.Student">
-        <property name="marks" value="48"> </property>
+
+     <!-- for Stter Injection-->
+<!--    <bean id="student" class="com.spring.setterInjection.Student">-->
+<!--        <property name="marks" value="48"> </property>-->
+<!--    </bean>-->
+
+
+     <!-- ref attribute -->
+<!--    <bean id="stud" class="com.spring.RefAttribute.Student">-->
+<!--      <property name="laptop" ref="lap"> </property>-->
+<!--    </bean>-->
+<!--    <bean id="lap" class="com.spring.RefAttribute.Laptop"> </bean>-->
+
+
+    <!-- For Constructor Injection-->
+<!--    <bean id="student" class="com.spring.constructorInjection.Student">-->
+
+<!--        <constructor-arg type="com.spring.constructorInjection.Laptop" ref="lap1"/>-->
+<!--        <constructor-arg type="int" value="21"/>-->
+
+<!--            <constructor-arg index="1" ref="lap1"/>-->
+<!--            <constructor-arg index="0" value="21"/>-->
+
+<!--        <constructor-arg  name="marks" value="50"/>-->
+<!--        <constructor-arg  name="lap" ref="lap1"/>-->
+
+<!--        <constructor-arg index="1" ref="lap1"/>-->
+<!--        <constructor-arg type="int" value="21"/>-->
+<!--    </bean>-->
+<!--    <bean id="lap1" class="com.spring.constructorInjection.Laptop"> </bean>-->
+
+
+    <!--AutoWiring  byName or byType-->
+    <bean id="student" class="com.spring.AutoWiring.Student" autowire="byName">
+       <property name="name" value="Vijay" />
+<!--        <property name="com" ref="lap"/>-->
+
     </bean>
-
+    <bean id="lap" class="com.spring.AutoWiring.Laptop"> </bean>
+    <bean id="com" class="com.spring.AutoWiring.Desktop"> </bean>
 
 
 </beans>
