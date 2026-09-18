@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="dev" class="com.spring.springFirstApp.Developer"> </bean>
+
+    <bean id="devobj" class="com.spring.objectCreation.Developer"> </bean>
+
+
+    <!-- for Scope-->
+    <bean id="studentOne" class="com.spring.objectCreation.Student" scope="prototype"> </bean>
+    <bean id="studentTwo" class="com.spring.objectCreation.Student" scope="prototype"> </bean>
+
+    <bean id="student" class="com.spring.setterInjection.Student">
+        <property name="marks" value="48"> </property>
+    </bean>
+
+
+
+</beans>
