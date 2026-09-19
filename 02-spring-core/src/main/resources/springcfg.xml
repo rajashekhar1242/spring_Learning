@@ -4,54 +4,78 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--object creation-->
-<!--    <bean id="dev" class="com.spring.springFirstApp.Developer"> </bean>-->
-<!--    <bean id="devobj" class="com.spring.objectCreation.Developer"> </bean>-->
+    <!--    <bean id="dev" class="com.spring.springFirstApp.Developer"> </bean>-->
+    <!--    <bean id="devobj" class="com.spring.objectCreation.Developer"> </bean>-->
 
 
     <!-- for Scope-->
-<!--    <bean id="studentOne" class="com.spring.objectCreation.Student" scope="prototype"> </bean>-->
-<!--    <bean id="studentTwo" class="com.spring.objectCreation.Student" scope="prototype"> </bean>-->
+    <!--    <bean id="studentOne" class="com.spring.objectCreation.Student" scope="prototype"> </bean>-->
+    <!--    <bean id="studentTwo" class="com.spring.objectCreation.Student" scope="prototype"> </bean>-->
 
 
-     <!-- for Stter Injection-->
-<!--    <bean id="student" class="com.spring.setterInjection.Student">-->
-<!--        <property name="marks" value="48"> </property>-->
-<!--    </bean>-->
+    <!-- for Stter Injection-->
+    <!--    <bean id="student" class="com.spring.setterInjection.Student">-->
+    <!--        <property name="marks" value="48"> </property>-->
+    <!--    </bean>-->
 
 
-     <!-- ref attribute -->
-<!--    <bean id="stud" class="com.spring.RefAttribute.Student">-->
-<!--      <property name="laptop" ref="lap"> </property>-->
-<!--    </bean>-->
-<!--    <bean id="lap" class="com.spring.RefAttribute.Laptop"> </bean>-->
+    <!-- ref attribute -->
+    <!--    <bean id="stud" class="com.spring.RefAttribute.Student">-->
+    <!--      <property name="laptop" ref="lap"> </property>-->
+    <!--    </bean>-->
+    <!--    <bean id="lap" class="com.spring.RefAttribute.Laptop"> </bean>-->
 
 
     <!-- For Constructor Injection-->
-<!--    <bean id="student" class="com.spring.constructorInjection.Student">-->
+    <!--    <bean id="student" class="com.spring.constructorInjection.Student">-->
 
-<!--        <constructor-arg type="com.spring.constructorInjection.Laptop" ref="lap1"/>-->
-<!--        <constructor-arg type="int" value="21"/>-->
+    <!--        <constructor-arg type="com.spring.constructorInjection.Laptop" ref="lap1"/>-->
+    <!--        <constructor-arg type="int" value="21"/>-->
 
-<!--            <constructor-arg index="1" ref="lap1"/>-->
-<!--            <constructor-arg index="0" value="21"/>-->
+    <!--            <constructor-arg index="1" ref="lap1"/>-->
+    <!--            <constructor-arg index="0" value="21"/>-->
 
-<!--        <constructor-arg  name="marks" value="50"/>-->
-<!--        <constructor-arg  name="lap" ref="lap1"/>-->
+    <!--        <constructor-arg  name="marks" value="50"/>-->
+    <!--        <constructor-arg  name="lap" ref="lap1"/>-->
 
-<!--        <constructor-arg index="1" ref="lap1"/>-->
-<!--        <constructor-arg type="int" value="21"/>-->
-<!--    </bean>-->
-<!--    <bean id="lap1" class="com.spring.constructorInjection.Laptop"> </bean>-->
+    <!--        <constructor-arg index="1" ref="lap1"/>-->
+    <!--        <constructor-arg type="int" value="21"/>-->
+    <!--    </bean>-->
+    <!--    <bean id="lap1" class="com.spring.constructorInjection.Laptop"> </bean>-->
 
 
-    <!--AutoWiring  byName or byType-->
-    <bean id="student" class="com.spring.AutoWiring.Student" autowire="byName">
-       <property name="name" value="Vijay" />
-<!--        <property name="com" ref="lap"/>-->
+    <!-- For AutoWiring  byName or byType-->
+    <!--    <bean id="student" class="com.spring.AutoWiring.Student" autowire="byName">-->
+    <!--       <property name="name" value="Vijay" />-->
+    <!--        <property name="com" ref="lap"/>-->
+    <!--    </bean>-->
+    <!--    <bean id="lap" class="com.spring.AutoWiring.Laptop"> </bean>-->
+    <!--    <bean id="com" class="com.spring.AutoWiring.Desktop"> </bean>-->
 
+    <!--Autowiring byType that has same type we use primary attribute-->
+    <!--    <bean id="student" class="com.spring.AutoWiring.Student" autowire="byType">-->
+    <!--        <property name="name" value="Vijay" />-->
+    <!--        <property name="com" ref="lap"/>  if this executes it will ignore primary-->
+    <!--    </bean>-->
+    <!--    <bean id="lap" class="com.spring.AutoWiring.Laptop"> </bean>-->
+    <!--    <bean id="desk" class="com.spring.AutoWiring.Desktop" primary="true"> </bean>-->
+
+
+    <!-- For Lazy Initialization of Beans-->
+<!--    <bean id="lap" class="com.spring.lazyInit.Laptop" lazy-init="true"/>-->
+
+
+    <!-- getBean By Type-->
+<!--    <bean id="lap" class="com.spring.GetBeanByType.Laptop"> </bean>-->
+<!--    <bean id="des" class="com.spring.GetBeanByType.Desktop"> </bean>-->
+<!--    <bean class="com.spring.GetBeanByType.Desktop" primary="true"/>-->
+
+    <!--inner bean that can be only acced by outer bean-->
+    <bean id="student" class="com.spring.InnerBean.Student" lazy-init="true">
+        <property name="com">
+            <bean id="lap" class="com.spring.InnerBean.Laptop"/>
+        </property>
     </bean>
-    <bean id="lap" class="com.spring.AutoWiring.Laptop"> </bean>
-    <bean id="com" class="com.spring.AutoWiring.Desktop"> </bean>
 
 
 </beans>
