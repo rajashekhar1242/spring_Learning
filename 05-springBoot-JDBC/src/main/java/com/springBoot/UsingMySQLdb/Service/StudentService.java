@@ -1,8 +1,8 @@
-package com.springBoot.Service;
+package com.springBoot.UsingMySQLdb.Service;
 
 
-import com.springBoot.Model.Student;
-import com.springBoot.Repository.StudentRepo;
+import com.springBoot.UsingMySQLdb.Model.Student;
+import com.springBoot.UsingMySQLdb.Repository.StudentRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

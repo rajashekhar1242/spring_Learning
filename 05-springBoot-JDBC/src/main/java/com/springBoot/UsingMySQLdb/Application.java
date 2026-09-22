@@ -1,7 +1,7 @@
-package com.springBoot;
+package com.springBoot.UsingMySQLdb;
 
-import com.springBoot.Model.Student;
-import com.springBoot.Service.StudentService;
+import com.springBoot.UsingMySQLdb.Model.Student;
+import com.springBoot.UsingMySQLdb.Service.StudentService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

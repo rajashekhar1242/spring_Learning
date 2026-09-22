@@ -1,7 +1,7 @@
-package com.springBoot.Repository;
+package com.springBoot.UsingMySQLdb.Repository;
 
 
-import com.springBoot.Model.Student;
+import com.springBoot.UsingMySQLdb.Model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.springBoot.Model;
+package com.springBoot.UsingMySQLdb.Model;
 
 
 import org.springframework.stereotype.Component;
