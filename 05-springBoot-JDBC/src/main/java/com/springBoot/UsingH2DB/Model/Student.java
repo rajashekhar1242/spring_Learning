@@ -1,0 +1,34 @@
+package com.springBoot.UsingH2DB.Model;
+
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Student {
+    public int id;
+    public String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+}
