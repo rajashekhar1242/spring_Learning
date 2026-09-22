@@ -8,5 +8,9 @@
     <file url="file://$PROJECT_DIR$/02-spring-boot/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/02-spring-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/02-spring-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/03-spring-boot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-spring-jdbc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-spring-jdbc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/05-springBoot-JDBC/src/main/java" charset="UTF-8" />
   </component>
 </project>
