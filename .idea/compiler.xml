@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="05-springBoot-JDBC" />
+        <module name="06-Spring-Web" />
         <module name="demo" />
         <module name="03-spring-boot" />
         <module name="04-spring-jdbc" />
@@ -21,6 +22,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="03-spring-boot" options="-parameters" />
       <module name="05-springBoot-JDBC" options="-parameters" />
+      <module name="06-Spring-Web" options="-parameters" />
       <module name="demo" options="-parameters" />
     </option>
   </component>
