@@ -13,6 +13,15 @@
         <module name="04-spring-jdbc" />
         <module name="02-spring-core" />
       </profile>
+      <profile name="Annotation profile for 07-job-Protal" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="07-job-Protal" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="02-spring-boot" target="25" />
@@ -25,6 +34,7 @@
       <module name="05-springBoot-JDBC" options="-parameters" />
       <module name="06-Spring-Web" options="-parameters" />
       <module name="06-SpringBoot-Web" options="-parameters" />
+      <module name="07-job-Protal" options="-parameters" />
       <module name="demo" options="-parameters" />
     </option>
   </component>
